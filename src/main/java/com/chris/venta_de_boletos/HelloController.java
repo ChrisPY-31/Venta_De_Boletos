@@ -20,6 +20,7 @@ public class HelloController {
 
     public void initialize() {
 
+        System.out.println("probando");
         List<String> asientos = gestorBoletos.insertarboletos(7, 10);
 
         int aux = 0;
