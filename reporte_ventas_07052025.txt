@@ -1,0 +1,35 @@
+Fecha: 2025-05-07T16:35:49.931706900
+Categoría: Preferencial
+Asiento: E-8
+Total: $300.0
+-------------------------
+Fecha: 2025-05-07T16:43:37.666229300
+Categoría: VIP
+Asiento: A-2, A-3
+Total: $1000.0
+-------------------------
+Fecha: 2025-05-07T16:43:48.363354300
+Categoría: VIP
+Asiento: A-4
+Total: $500.0
+-------------------------
+Fecha: 2025-05-07T16:44:49.771009600
+Categoría: VIP
+Asiento: A-11, A-12
+Total: $1000.0
+-------------------------
+Fecha: 2025-05-07T16:53:11.685750700
+Categoría: VIP
+Asiento: A-2, A-3
+Total: $1000.0
+-------------------------
+Fecha: 2025-05-07T16:53:46.465711200
+Categoría: General
+Asiento: A-5
+Total: $500.0
+-------------------------
+Fecha: 2025-05-07T16:56:27.323679700
+Categoría: VIP
+Asiento: A-8, A-9
+Total: $1000.0
+-------------------------

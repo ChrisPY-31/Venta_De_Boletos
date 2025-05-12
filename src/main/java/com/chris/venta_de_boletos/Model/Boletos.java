@@ -3,30 +3,30 @@ package com.chris.venta_de_boletos.Model;
 import java.util.UUID;
 
 public class Boletos {
-    private String idBoleto;
+    private String id;
     private String categoria;
     private double precio;
-    private Integer numeroAsientos;
-    private Boolean estado;
+    private String asiento; // Formato "Fila-Columna" ej. "A-1"
+    private boolean vendido;
 
-    public Boletos() {
-
-    }
-
-    public Boletos(String idBoleto ,String categoria, double precio, Integer numeroAsientos, Boolean estado) {
-        this.idBoleto = idBoleto;
+    // Constructor, getters y setters
+    public Boletos(String id, String categoria, double precio, String asiento) {
+        this.id = id;
         this.categoria = categoria;
         this.precio = precio;
-        this.numeroAsientos = numeroAsientos;
-        this.estado = estado;
+        this.asiento = asiento;
+        this.vendido = false;
     }
 
-    public String getIdBoleto() {
-        return idBoleto;
+    // Métodos adicionales...
+
+
+    public String getId() {
+        return id;
     }
 
-    public void setIdBoleto(String idBoleto) {
-        this.idBoleto = idBoleto;
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getCategoria() {
@@ -45,27 +45,19 @@ public class Boletos {
         this.precio = precio;
     }
 
-    public Integer getNumeroAsientos() {
-        return numeroAsientos;
+    public String getAsiento() {
+        return asiento;
     }
 
-    public void setNumeroAsientos(Integer numeroAsientos) {
-        this.numeroAsientos = numeroAsientos;
+    public void setAsiento(String asiento) {
+        this.asiento = asiento;
     }
 
-    public Boolean getEstado() {
-        return estado;
+    public boolean isVendido() {
+        return vendido;
     }
 
-    public void setEstado(Boolean estado) {
-        this.estado = estado;
-    }
-
-    public String toString(){
-        return ("" +
-                "id" +getIdBoleto()+
-                "\ncategoria" + getCategoria()+
-                "\nprecio" + getPrecio() +
-                "\nnumeroAsientos" + getNumeroAsientos() + "");
+    public void setVendido(boolean vendido) {
+        this.vendido = vendido;
     }
 }
