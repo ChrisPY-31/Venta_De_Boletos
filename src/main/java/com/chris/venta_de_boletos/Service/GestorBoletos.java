@@ -13,6 +13,7 @@ import java.util.*;
 
 public class GestorBoletos {
 
+
     private Map<String, LinkedList<Boletos>> boletosPorCategoria;
     private Map<String, Double> preciosCategorias;
     private Queue<String> reportesVentas;
@@ -23,7 +24,6 @@ public class GestorBoletos {
         preciosCategorias = new HashMap<>();
         reportesVentas = new LinkedList<>();
         asientosOcupados = new boolean[filas][columnas];
-
         preciosCategorias.put("VIP", 500.0);
         preciosCategorias.put("Preferencial", 300.0);
         preciosCategorias.put("General", 150.0);
@@ -45,7 +45,6 @@ public class GestorBoletos {
                 if (i < 2) categoria = "VIP";
                 else if (i < 5) categoria = "Preferencial";
                 else categoria = "General";
-
                 Boletos boleto = new Boletos(
                         UUID.randomUUID().toString(),
                         categoria,
@@ -58,6 +57,7 @@ public class GestorBoletos {
             fila++;
         }
     }
+
 
     public boolean comprarBoleto(String categoria, String asiento) {
         if (!preciosCategorias.containsKey(categoria)) {
@@ -132,6 +132,7 @@ public class GestorBoletos {
         return reporte;
     }
 
+
     private void guardarReporteEnArchivo(String reporte) {
         String nombreArchivo = "reporte_ventas_" +
                 LocalDate.now().format(DateTimeFormatter.ofPattern("ddMMyyyy")) +
@@ -154,6 +155,7 @@ public class GestorBoletos {
 
     public boolean[][] getAsientosOcupados() {
         return asientosOcupados;
+
     }
 
 }
