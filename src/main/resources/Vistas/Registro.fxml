@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="849.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chris.venta_de_boletos.Controllers.RegistroController">
+   <children>
+      <SplitPane dividerPositions="0.31616671091053883" layoutX="130.0" layoutY="103.0" prefHeight="546.0" prefWidth="755.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="244.0" style="-fx-background-color: #012E46; -fx-border-width: black;">
+               <children>
+                  <Text fill="WHITE" layoutX="80.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registro">
+                     <font>
+                        <Font name="Britannic Bold" size="28.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="137.0" fitWidth="139.0" layoutX="76.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+
+                  </ImageView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="593.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox layoutX="11.0" layoutY="71.0" prefHeight="32.0" prefWidth="482.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="223.0" text="Nombre de usuario:">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtNombreUsuario" prefHeight="31.0" prefWidth="344.0" promptText="Nombre" style="-fx-border-width: 0 0 1 0; -fx-border-color: #0B5394; -fx-padding: 5 0 5 0; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-background-color: transparent;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="154.0" prefHeight="32.0" prefWidth="482.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="275.0" text="Correo:">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtCorreoUsuario" prefHeight="32.0" prefWidth="397.0" promptText="Correo electronico" style="-fx-background-color: transparent; -fx-padding: 5 0 5 0; -fx-border-color: #0B5394; -fx-font-size: 14px; -fx-text-fill: #333333; -fx-border-width: 0 0 1 0;" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="15.0" layoutY="233.0" prefHeight="32.0" prefWidth="482.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="181.0" text="Contraseña:">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="txtContraseñaUsuario" prefHeight="32.0" prefWidth="301.0" promptText="Ingrese una contraseña" style="-fx-background-color: transparent; -fx-border-width: 0 0 1 0; -fx-border-color: #0B5394; -fx-padding: 5 0 5 0; -fx-font-size: 14px; -fx-text-fill: #333333;" styleClass="-fx-background-color: transparent; -fx-border-width: 0 0 2 0; -fx-border-color: #0B5394; -fx-padding: 5 0 5 0; -fx-font-size: 14px; -fx-text-fill: #333333;" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblPasswordMensaje" layoutX="196.0" layoutY="272.0" prefHeight="18.0" prefWidth="302.0" style="-fx-text-fill: gray; -fx-font-size: 10px;" text="Minimo 6-8 caracteres, al menos un número y un carácter especial" textFill="#969393" visible="false" wrapText="true" />
+                  <HBox layoutX="15.0" layoutY="317.0" prefHeight="32.0" prefWidth="482.0">
+                     <children>
+                        <Label prefHeight="32.0" prefWidth="237.0" text="Rol:">
+                           <font>
+                              <Font name="Britannic Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="RolList" onAction="#ElegirRol" prefHeight="26.0" prefWidth="362.0" promptText="--Selecciona una opción--" style="-fx-background-color: white; -fx-border-color: #0078D7; -fx-border-radius: 4px; -fx-padding: 4px;" />
+                     </children></HBox>
+                  <Button layoutX="187.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnRegistrarUsuario" prefHeight="42.0" prefWidth="202.0" style="-fx-background-color: #094293;" text="Registrarse" textFill="WHITE">
+                     <font>
+                        <Font name="Britannic Bold" size="18.0" />
+                     </font></Button>
+                  <Label layoutX="372.0" layoutY="467.0" style="-fx-text-fill: gray;" text="Ya tienes cuenta?" textFill="#1334d9" underline="true" />
+                  <Button layoutX="464.0" layoutY="462.0" mnemonicParsing="false" onAction="#btnIniciaSesion" prefHeight="27.0" prefWidth="90.0" style="-fx-background-color: white; -fx-text-fill: #094293; -fx-border-color: transparent; -fx-font-weight: normal;" text="Iniciar Sesión" textFill="WHITE" underline="true">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Button>
+                  <Label fx:id="lblCorreoMensaje" layoutX="196.0" layoutY="196.0" prefHeight="18.0" prefWidth="181.0" style="-fx-text-fill: gray; -fx-font-size: 10px;" text="usuario@dominio.com" textFill="#969393" visible="false" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
